@@ -1,0 +1,47 @@
+[
+ {
+  "path": "/packages/iot/webclient", 
+  "ver": "latest", 
+  "name": "WEBCLIENT"
+ }, 
+ {
+  "path": "/packages/iot/cJSON", 
+  "ver": "v1.0.2", 
+  "name": "CJSON"
+ }, 
+ {
+  "path": "/packages/iot/netutils", 
+  "ver": "v1.1.0", 
+  "name": "NETUTILS"
+ }, 
+ {
+  "path": "/packages/iot/at_device", 
+  "ver": "latest", 
+  "name": "AT_DEVICE"
+ }, 
+ {
+  "path": "/packages/iot/lssdp", 
+  "ver": "latest", 
+  "name": "LSSDP"
+ }, 
+ {
+  "path": "/packages/security/tinycrypt", 
+  "ver": "v1.0.0", 
+  "name": "TINYCRYPT"
+ }, 
+ {
+  "path": "/packages/language/micropython", 
+  "ver": "latest", 
+  "name": "MICROPYTHON"
+ }, 
+ {
+  "path": "/packages/tools/adbd", 
+  "ver": "latest", 
+  "name": "ADBD"
+ }, 
+ {
+  "path": "/packages/misc/samples/network_samples", 
+  "ver": "latest", 
+  "name": "NETWORK_SAMPLES"
+ }
+]

@@ -1,0 +1,28 @@
+import os
+from building import * 
+import rtconfig
+
+cwd     = GetCurrentDir()
+src     = Glob('*.c') + Glob('*.cpp')
+
+src    += Glob('api/*.c') + Glob('api/*.cpp')
+src    += Glob('launcher/*.c') + Glob('launcher/*.cpp')
+src    += Glob('startup/*.c') + Glob('startup/*.cpp')
+
+if GetDepend('PKG_JS_PERSIMMON_ENABLE_LCD_API') == 0:
+    SrcRemove(src, 'api/js_lcd.c')
+
+if GetDepend('PKG_JS_PERSIMMON_ENABLE_OTA_API') == 0:
+    SrcRemove(src, 'api/js_ota.c')
+    
+CPPPATH = [cwd]
+
+depend  = ['PKG_USING_JS_PERSIMMON', 'PKG_USING_EZXML']
+
+LIBPATH = [cwd]
+LIBS = ['libjs_persimmon_gcc.a']
+src = []
+
+group = DefineGroup('js_persimmon', src, depend = depend, CPPPATH = CPPPATH, LIBS = LIBS, LIBPATH = LIBPATH)
+
+Return('group')

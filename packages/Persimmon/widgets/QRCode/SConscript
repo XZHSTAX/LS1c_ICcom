@@ -1,0 +1,11 @@
+# RT-Thread building script for Persimmon
+
+from building import *
+
+cwd = GetCurrentDir()
+src = Glob('*.c') + Glob('*.cpp')
+CPPPATH = [cwd]
+
+group = DefineGroup('Persimmon', src, depend = [''], CPPPATH = CPPPATH)
+
+Return('group')

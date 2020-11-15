@@ -1,0 +1,10 @@
+from building import *
+
+cwd = GetCurrentDir()
+src = Glob('*.c') + Glob('*.cpp')
+
+CPPPATH = [cwd, str(Dir('#'))]
+
+group = DefineGroup('Persimmon_demo', src, depend = ['PKG_PERSIMMON_USING_DEMO_PAGE'], CPPPATH = CPPPATH)
+
+Return('group')
